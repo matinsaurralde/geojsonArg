@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #262626; -webkit-text-stroke: #262626; background-color: #f2f2f2}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #262626; -webkit-text-stroke: #262626; background-color: #f2f2f2; min-height: 15.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Leaflet GeoJSON Example&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style type="text/css"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.leaflet-container{background-color:#c5e8ff;}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="map" style="width: 600px; height: 400px"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="http://code.jquery.com/jquery-1.10.2.min.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>var myGeoJSONPath = 'path/to/mymap.geo.json';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>var myCustomStyle = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>stroke: false,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>fill: true,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>fillColor: '#fff',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>fillOpacity: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>$.getJSON(myGeoJSONPath,function(data){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>var map = L.map('map').setView([39.74739, -105], 4);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>L.geoJson(data, {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>clickable: false,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>style: myCustomStyle</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}).addTo(map);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
